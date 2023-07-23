@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.test.sodexo.dto.NewsDTO;
 import com.test.sodexo.model.Articles;
+import com.test.sodexo.utils.DateUtil;
 
 @Service
 public class ClientService {
@@ -24,6 +25,7 @@ public class ClientService {
                 Articles.class);
         if (response.getBody() != null) {
             newsList = response.getBody().getResults();
+            newsList.stream().forEach(n -> n.setFormatedPublishedAt(DateUtil.formatDate(n.getPublishedAt())));
         }
         return newsList;
     }
