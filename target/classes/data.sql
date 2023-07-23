@@ -1,0 +1,2 @@
+INSERT INTO news (id, title,url,image_url,summary,news_site,publish_date,updated_date,published) VALUES (1, 'Title X','https://www.nasa.gov/press-release/el-administrador-de-nasa-viajar-a-sudam-rica-hablar-de-cooperaci-n','https://www.nasa.gov/sites/default/files/thumbnails/image/53055306699_f2cc87d539_o.jpg?itok=J4K9KDF0','Summary1','NASA', '2023-07-20','2023-07-20', 1);
+INSERT INTO users (id,username,password,is_active,creation_date,birth_date) VALUES (1, 'User1','password',1,'2023-07-20', '1991-01-01');
